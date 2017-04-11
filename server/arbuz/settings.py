@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'server.arbuz.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE':   'django.db.backends.mysql',
-        'NAME':     'spasungate',
-        'USER':     'spasungate',
-        'PASSWORD': 'szczypiorek&spasungate',
+        'NAME':     'arbuzteam',
+        'USER':     'arbuzteam',
+        'PASSWORD': 'szczypiorek&arbuzteam',
         'HOST':     'localhost',
         'PORT':     '',
     }
