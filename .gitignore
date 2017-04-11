@@ -1,0 +1,9 @@
+.idea/*
+*.pyc
+*.swp
+*.swo
+update_settings.sh
+update_settings_outside.sh
+*migrations*
+node_modules/*
+*.directory
