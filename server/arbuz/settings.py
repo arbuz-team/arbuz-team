@@ -25,8 +25,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'server.arbuz',
+    'server.dialog',
     'server.main',
+    'server.navigation',
+    'server.root',
     'server.session',
+    'server.setting',
+    'server.statement',
     'server.translator',
 
 )
@@ -132,4 +137,4 @@ GEOIP_PATH = os.path.join(BASE_DIR, 'server', 'arbuz', 'geoip')
 
 # Other
 SESSION_SAVE_EVERY_REQUEST = True
-DISPLAY_STATUS = True
+DISPLAY_STATUS = False

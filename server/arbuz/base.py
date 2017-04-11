@@ -19,8 +19,8 @@ class Dynamic_Base:
     def Render_HTML(self, file_name, form_name = ''):
 
         # example: EN/user/sign_in.html
-        template = self.request.session['translator_language'] \
-                   + '/' + file_name
+        language = self.request.session['translator_language']
+        template = language + '/' + file_name
 
         self.content['form_name'] = form_name
         return render(self.request, template, self.content)
@@ -41,13 +41,13 @@ class Dynamic_Base:
         urls = \
         {
             'en': secure + 'en.' + domain +
-                  reverse(name, urlconf='arbuz.urls.en', kwargs=kwargs),
+                  reverse(name, urlconf='server.arbuz.urls.en', kwargs=kwargs),
 
             'pl': secure + 'pl.' + domain +
-                 reverse(name, urlconf='arbuz.urls.pl', kwargs=kwargs),
+                 reverse(name, urlconf='server.arbuz.urls.pl', kwargs=kwargs),
 
             # 'de': secure + 'de.' + domain +
-            #      reverse(name, urlconf='arbuz.urls.de', kwargs=kwargs),
+            #      reverse(name, urlconf='server.arbuz.urls.de', kwargs=kwargs),
         }
 
         if language:
