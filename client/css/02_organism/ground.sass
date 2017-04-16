@@ -1,0 +1,49 @@
+
+$name: '#{$organism}-ground'
+// -----------------------
+$ground-before--bg-color: $c-indian-khaki
+
+$ground--bg-color: $c-white
+$ground--color: $c-black-marlin
+$ground--border-color: transparent
+$ground--min-height: 300px
+
+$ground-content--bg-color: $c-white
+// -----------------------
+
+#{$name}::before
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+
+  box-sizing: border-box
+  height: 8px
+
+  border-bottom: $s-border-bold
+  background: $ground-before--bg-color
+  content: ''
+
+  z-index: 200
+
+#{$name}
+  display: block
+
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+
+#{$name}-content
+  position: absolute
+  top: 8px
+  left: 0
+  bottom: 0
+  right: 0
+
+  overflow-y: scroll
+  background-color: $ground-content--bg-color
+
+  >*
+    margin: 0 15px

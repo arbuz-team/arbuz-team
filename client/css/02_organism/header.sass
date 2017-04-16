@@ -1,0 +1,25 @@
+
+$name: '#{$organism}-header'
+// -----------------------
+$header--height: 50px
+$header--bg-color: transparent
+$header--index: 70
+// -----------------------
+
+#{$name}
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+
+  display: block
+  height: $header--height
+  background-color: transparent
+  overflow: visible
+
+  z-index: $header--index
+
+#{$name}-content
+  position: relative
+  height: inherit
+  background-color: $header--bg-color

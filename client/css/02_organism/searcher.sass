@@ -1,0 +1,27 @@
+
+$name: '#{$organism}-searcher'
+// -----------------------
+$searcher--height: 50px
+$searcher--bg-color: $c-white
+$searcher--index: 75
+
+$searcher-content--bg-color: transparent
+// -----------------------
+
+#{$name}
+  position: absolute
+  left: -250px
+  top: 0
+  bottom: 0
+
+  display: block
+  width: 250px
+  background-color: $searcher--bg-color
+  overflow: visible
+
+  z-index: $searcher--index
+
+#{$name}-content
+  position: relative
+  height: inherit
+  background-color: $searcher-content--bg-color
