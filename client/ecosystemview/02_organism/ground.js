@@ -3,22 +3,19 @@
  */
 
 import {init} from '../untilities/structure'
+import {init_organism} from './_init_group'
 import {Organism} from '../init/02_organism'
 
-// ----- Defining group ----- //
-init.organisms.ground = {};
-let init_group = init.organisms.ground;
 
-
-init_group.About_Something = function()
+init_organism.ground.About_Something = function()
 {
 	let features = {
-		group: 'ground',
 		name: 'about_something',
+		group: init_organism.ground,
 
 		children: [
-			init.cells.about_something.Ground_Block(),
-			init.molecules.paragraph.With_Title(),
+			init.cell.paragraph.Ground_Block(),
+			init.molecule.paragraph.With_Title(),
 		],
 	};
 

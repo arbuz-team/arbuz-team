@@ -17,15 +17,15 @@ export function EcosystemsView(base, features)
 
 	let
 		id_element =    this.generate_id(base, features),
-		class_group =   base.prefix +'-'+ features.group,
-		class_name =   class_group +'-'+ features.name;
+		class_group =   base.prefix +'-'+ features.group.get_name(),
+		class_name =    class_group +'-'+ features.name;
 
 
 	this.features = {
 		id:             id_element,
 		classes:        [class_group, class_name],
 
-		group:          features.group,
+		group:          features.group.get_name(),
 		name:           features.name,
 
 		node_name:      'div',
@@ -56,7 +56,7 @@ EcosystemsView.prototype.insert_to_structure = function(base)
 
 EcosystemsView.prototype.generate_id = function(base, features)
 {
-	return base.prefix + base.ordinal +'-'+ features.group +'-'+ features.name;
+	return base.prefix + base.ordinal +'-'+ features.group.get_name() +'-'+ features.name;
 };
 
 

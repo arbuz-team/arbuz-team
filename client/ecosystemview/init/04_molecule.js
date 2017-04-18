@@ -30,7 +30,7 @@ Molecule.prototype = Object.create(EcosystemsView.prototype);
 
 // --------------------- Function definitions -------------------------
 
-Molecule.prototype.create = function(special_features, parent)
+Molecule.prototype.create = function(features, parent)
 {
 	console.log('creating molecule');
 
@@ -39,7 +39,7 @@ Molecule.prototype.create = function(special_features, parent)
 	dom.insert_to_parent(this);
 	this.create_lower(this);
 
-	if(logic.is_object(special_features))
-		if(logic.is_object(special_features.molecules_features))
-			this.add_features(special_features.molecules_features[this.features.html_name]);
+	if(logic.is_object(features))
+		if(logic.is_object(features.molecules_features))
+			this.add_features(features.molecules_features[this.features.html_name]);
 };

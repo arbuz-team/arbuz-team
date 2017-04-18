@@ -2,20 +2,15 @@
  * Created by mrskull on 12.04.17.
  */
 
-import {init} from '../../untilities/structure'
+import {init_group} from '../_init_group'
 import {Atom} from '../../init/05_atom'
 
-// ----- Defining group ----- //
-let
-	init_group = init.atoms.sections,
-	group_name = 'sections';
 
-
-init_group.Title = function()
+init_group.section.Title = function()
 {
 	let features = {
-		group: group_name,
 		name: 'title',
+		group: init_group.section,
 
 		node_name: 'h1',
 		addl_classes: 'homer',

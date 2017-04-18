@@ -47,22 +47,22 @@
 
 	'use strict';
 	
-	__webpack_require__(30);
+	__webpack_require__(35);
 	
 	window.viewability = function () {
-	  return __webpack_require__(34);
+	  return __webpack_require__(39);
 	}();
 
 /***/ },
 
-/***/ 30:
+/***/ 35:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 34:
+/***/ 39:
 /***/ function(module, exports) {
 
 	"use strict";

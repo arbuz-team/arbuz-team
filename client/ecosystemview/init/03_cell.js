@@ -30,7 +30,7 @@ Cell.prototype = Object.create(EcosystemsView.prototype);
 
 // --------------------- Function definitions -------------------------
 
-Cell.prototype.create = function(special_features, parent)
+Cell.prototype.create = function(features, parent)
 {
 	console.log('creating cell');
 
@@ -39,7 +39,7 @@ Cell.prototype.create = function(special_features, parent)
 	dom.insert_to_parent(this);
 	this.create_lower(this);
 
-	if(logic.is_object(special_features))
-		if(logic.is_object(special_features.cells_features))
-			this.add_features(special_features.cells_features[this.features.html_name]);
+	if(logic.is_object(features))
+		if(logic.is_object(features.cells_features))
+			this.add_features(features.cells_features[this.features.html_name]);
 };

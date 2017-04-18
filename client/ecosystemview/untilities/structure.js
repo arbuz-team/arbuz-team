@@ -2,15 +2,18 @@
  * Created by mrskull on 12.04.17.
  */
 
+import {Group} from './group'
+
+
 export let
 	EV = {},
 	init = {};
 
-init.atoms = {};
-init.molecules = {};
-init.cells = {};
-init.organisms = {};
-init.ecosystems = {};
+init.atom =         new Group('atom');
+init.molecule =     new Group('molecule');
+init.cell =         new Group('cell');
+init.organism =     new Group('organism');
+init.ecosystem =    new Group('ecosystem');
 
 EV.atoms = {};
 EV.molecules = {};
@@ -36,5 +39,7 @@ let
 		                return level[element];
 		}
 	};
+
+// TODO Service for structure
 
 export {get_element as $EV}

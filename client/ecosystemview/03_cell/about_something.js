@@ -3,22 +3,19 @@
  */
 
 import {init} from '../untilities/structure'
+import {init_cell} from './_init_group'
 import {Cell} from '../init/03_cell'
 
-// ----- Defining group ----- //
-init.cells.about_something = {};
-let init_group = init.cells.about_something;
 
-
-init_group.Ground_Block = function()
+init_cell.paragraph.Ground_Block = function()
 {
 	let features = {
-		group: 'about_something',
 		name: 'ground_block',
+		group: init_cell.paragraph,
 
 		children: [
-			init.molecules.paragraph.With_Title(),
-			init.molecules.paragraph.Without_Title(),
+			init.molecule.paragraph.With_Title(),
+			init.molecule.paragraph.Without_Title(),
 		],
 	};
 

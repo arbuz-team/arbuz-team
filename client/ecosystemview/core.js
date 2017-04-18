@@ -12,26 +12,27 @@ window.addEventListener('load', ()=>{
 
 	let sets_of_features = [
 		new Set_Of_Features({
-			id: 'a1-header-title',
+			id: 'a1-section-title',
 			text: 'To jest tytuł!',
 		}),
 		new Set_Of_Features({
-			id: 'a2-paragraph-standard',
+			id: 'a2-section-paragraph',
 			text: 'Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit.' +
 				'Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit.' +
 				'Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit.',
 		}),
 		new Set_Of_Features({
-			id: 'a4-header-title',
+			id: 'a4-section-title',
 			text: 'To jest tytuł!',
 		}),
 		new Set_Of_Features({
-			id: 'a5-paragraph-standard',
+			id: 'a5-section-paragraph',
 			text: 'Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit.' +
 			'Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit.' +
 			'Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit. Tutaj rozpoczyna się akapit.',
 		}),
 	];
 
-	init.ecosystems.About_Something(sets_of_features);
+
+	init.ecosystem.About_Something(sets_of_features);
 });

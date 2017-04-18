@@ -3,22 +3,19 @@
  */
 
 import {init} from '../untilities/structure'
+import {init_molecule} from './_init_group'
 import {Molecule} from '../init/04_molecule'
 
-// ----- Defining group ----- //
-init.molecules.paragraph = {};
-let init_group = init.molecules.paragraph;
 
-
-init_group.With_Title = function()
+init_molecule.paragraph.With_Title = function()
 {
 	let features = {
-		group: 'paragraph',
 		name: 'with_title',
+		group: init_molecule.paragraph,
 
 		children: [
-			init.atoms.header.Title(),
-			init.atoms.paragraph.Standard(),
+			init.atom.section.Title(),
+			init.atom.section.Paragraph(),
 		],
 	};
 
@@ -26,14 +23,14 @@ init_group.With_Title = function()
 };
 
 
-init_group.Without_Title = function()
+init_molecule.paragraph.Without_Title = function()
 {
 	let features = {
-		group: 'paragraph',
 		name: 'without_title',
+		group: init_molecule.paragraph,
 
 		children: [
-			init.atoms.paragraph.Standard(),
+			init.atom.section.Paragraph(),
 		],
 	};
 

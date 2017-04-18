@@ -36,16 +36,16 @@ Atom.prototype = Object.create(EcosystemsView.prototype);
 delete Atom.prototype.create_lower;
 
 
-Atom.prototype.create = function(special_features, parent)
+Atom.prototype.create = function(features, parent)
 {
 	console.log('creating atom');
 
 	this.features.parent = parent;
 	dom.insert_to_parent(this);
 
-	if(logic.is_object(special_features))
-		if(logic.is_object(special_features.atoms_features))
-			this.add_features(special_features.atoms_features[this.features.html_name]);
+	if(logic.is_object(features))
+		if(logic.is_object(features.atoms_features))
+			this.add_features(features.atoms_features[this.features.html_name]);
 
 	if(logic.is_defined(this.features.text))
 		dom.insert_text(this);

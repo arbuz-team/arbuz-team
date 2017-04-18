@@ -6,13 +6,14 @@ import {init} from '../untilities/structure'
 import {Ecosystem} from '../init/01_ecosystem'
 
 
-init.ecosystems.About_Something = function(sets_of_features)
+init.ecosystem.About_Something = function(sets_of_features)
 {
 	let features = {
 		name: 'about_something',
+		group: init.ecosystem,
 
 		children: [
-			init.organisms.ground.About_Something(),
+			init.organism.ground.About_Something(),
 		],
 	};
 

@@ -36,13 +36,13 @@ Organism.prototype = Object.create(EcosystemsView.prototype);
 
 // --------------------- Function definitions -------------------------
 
-Organism.prototype.create = function(special_features)
+Organism.prototype.create = function(features)
 {
 	console.log('creating organism');
 
 	this.create_lower(this);
 
-	if(logic.is_object(special_features))
-		if(logic.is_object(special_features.organisms_features))
-			this.add_features(special_features.organisms_features[this.features.html_name]);
+	if(logic.is_object(features))
+		if(logic.is_object(features.organisms_features))
+			this.add_features(features.organisms_features[this.features.html_name]);
 };
